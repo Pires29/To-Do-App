@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <div className="d-flex">
+      <div>
           {/*<Sidebar />*/}
-          <div className="flex-grow-1">{children}</div>
+          <div className="center-task">{children}</div>
         </div>
       </body>
     </html>

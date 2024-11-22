@@ -78,8 +78,8 @@ export default function Home() {
   };
 
   return (
-    <div className="position-relative">
-      <div className="w-50 center-task">
+    <div>
+      <div className="">
         {/* Container de Tarefas ocupando toda a largura */}
         <div className="tasks-container light-grey-bg p-6 w-100">
           <div className="d-flex justify-content-center text-light mb-4">
