@@ -1,0 +1,241 @@
+@import './variables.scss';
+
+body {
+    background-color: $secondarydark;
+    font-family: 'Roboto', sans-serif;
+  };
+
+p{
+  margin-bottom: 0;
+}
+
+.bg-purple{
+    background-color: $purple;
+    border-radius: 10px;
+}
+
+.table{
+  --bs-table-bg: transparent!important;
+  --bs-table-color:  white!important;
+
+  margin-bottom: 0;
+
+}
+
+.table>:not(caption)>*>*{
+  padding: 1rem 1rem;
+}
+
+.light-grey-bg{
+  background-color: $primarydark;
+  border-radius: 10px;
+}
+
+.bg-lightgrey{
+  background-color: $lightgrey;
+  border-radius: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; // Define a proporção entre as colunas (2 para a esquerda e 1 para a direita)
+  gap: 10px; // Define o espaço entre as colunas, ajuste conforme necessário
+}
+
+.tasks-container, .chourica-container {
+  background-color: $primarydark; // Cor de fundo como o light-grey-bg
+  padding: 16px;
+}
+
+.custom-hr {
+  border: none; // Remove a borda padrão
+  border-radius: 2px;
+  height: 1px; // Define a altura da linha
+  background-color: white; // Cor personalizada
+  margin: 1rem 0 1.5rem 0; // Espaçamento opcional
+}
+
+.margin-custom-grid{
+  margin-top: 10px;
+}
+
+.custom-search-bar {
+  background-color: transparent;
+  border: 2px solid ; // Define a borda como light grey
+  color: $lightgrey; // Define a cor do texto como light grey
+  padding: 10px;
+  border-radius: 10px; // Ajuste o border-radius conforme o estilo desejado
+
+  // Modificação na cor do placeholder (se necessário)
+  &::placeholder {
+    color: grey;
+  }
+}
+
+.trash-icon {
+  color: light; /* Cor inicial */
+  transition: color 0.3s; /* Animação suave */
+}
+
+.trash-icon:hover {
+  color: $purple; /* Cor roxa ao passar o mouse */
+  cursor: pointer;
+}
+
+.hover-icon{
+  cursor: pointer;
+  font-size: 3rem;
+}
+/* Text Sizes*/
+
+.text-xl{
+  font-size: $font-size-xl;
+}
+
+.text-small{
+  font-size: $font-size-small;
+}
+
+.text-medium{
+  font-size: $font-size-medium;
+}
+
+.text-large{
+  font-size: $font-size-large;
+}
+
+/* Buttons */
+
+
+/* CSS */
+.button-23 {
+  background-color: $purple;
+  border: 1px solid $purple;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 15px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.form-input-custom{
+  background-color: transparent;
+  border: 2px solid $purple;
+  border-radius: 8px;
+  color: white!important;
+  padding: 5px 10px;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.form-select {
+  background-color: transparent;
+  border: 2px solid $purple;
+  color: grey;
+}
+
+.btn-add-task{
+  background-color: $purple;
+  border: 2px solid $purple;
+  color: white;
+  padding: 8px 30px;
+}
+
+.btn-add-task:hover{
+  background-color: #7643f7;
+  color: white;
+}
+
+.btn-cancel-task{
+  background-color: grey;
+  color: white;
+  padding: 8px 30px;
+}
+
+.btn-cancel-task:hover{
+  background-color: rgb(108, 108, 108);
+  color: white;
+}
+
+.bg-sidebar{
+  background-color: $primarydark;
+}
+
+.p-6{
+  padding: 2.5rem;
+}
+
+/* global.scss */
+/* Defina a cor roxa */
+
+.task-item {
+  background-color: $purple;
+  color: white;
+}
+
+.button-23 {
+  background-color: $purple;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.btn-add-task {
+  background-color: $purple;
+  color: white;
+}
+
+.text-custom-color{
+  color: lightgrey;
+}
+
+.center-task{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
