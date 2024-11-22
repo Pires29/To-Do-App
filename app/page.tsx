@@ -7,19 +7,23 @@ import { useState } from "react";
 import TaskIcon from "./component/taskIcon";
 import "./styles/global.scss";
 
+interface Task {
+  id: number;
+  title: string;
+  isCompleted: boolean;
+  isEditing: boolean;
+}
 
 export default function Home() {
-  const [tasks, setTasks] = useState([
-  ]);
-
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [titleTask, setTitleTask] = useState(""); // Para novas tarefas
   const [editingTaskTitle, setEditingTaskTitle] = useState(""); // Para título da tarefa em edição
-  const [tasksCompleted, setTasksCompleted] = useState([]);
+  const [tasksCompleted, setTasksCompleted] = useState<Task[]>([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [editTaskId, setEditTaskId] = useState(null);
-  
+  const [editTaskId, setEditTaskId] = useState<number | null>(null);
+
   // Adicionar ou Atualizar Tarefa
-  const addOrUpdateTask = (e) => {
+  const addOrUpdateTask = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (isEditing) {
@@ -38,7 +42,7 @@ export default function Home() {
         return;
       }
 
-      const newTask = {
+      const newTask: Task = {
         id: tasks.length + 1,
         title: titleTask,
         isCompleted: false,
@@ -49,7 +53,7 @@ export default function Home() {
     }
   };
 
-  const editTask = (task) => {
+  const editTask = (task: Task) => {
     setIsEditing(true);
     setEditTaskId(task.id);
     setEditingTaskTitle(task.title); // Atualiza o título da tarefa em edição
@@ -58,11 +62,11 @@ export default function Home() {
     setTasks(tasks.map(t => t.id === task.id ? { ...t, isEditing: true } : t));
   };
 
-  const removeTask = (id) => {
+  const removeTask = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const AddTaskCompletion = (id) => {
+  const AddTaskCompletion = (id: number) => {
     const taskToComplete = tasks.find((task) => task.id === id);
     if (taskToComplete) {
       setTasksCompleted([
@@ -104,7 +108,7 @@ export default function Home() {
           <div>
             {tasks.length === 0 ? (
               <div className="d-flex justify-content-center mt-3">
-                < p className="text-custom-color">Add some tasks...</p>
+                <p className="text-custom-color">Add some tasks...</p>
               </div>
             ) : (
               tasks.map((task) => (
@@ -158,11 +162,3 @@ export default function Home() {
     </div>
   );
 }
-
-/* 
-A acrescentar:
-- Design da App (Foto nas Transferencias)
-- Pesquisar tarefas
-- Guardar os dados numa base de dados etc
-
-*/

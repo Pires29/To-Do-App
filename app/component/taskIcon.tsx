@@ -1,7 +1,14 @@
+// taskIcon.tsx
 import { RiCircleLine, RiCircleFill } from "react-icons/ri";
 import { useState } from "react";
 
-function TaskIcon({ taskId, AddTaskCompletion }) {
+// Defina uma interface para as propriedades do componente
+interface TaskIconProps {
+  taskId: number; // Ajuste o tipo conforme necessário
+  AddTaskCompletion: (id: number) => void; // Ajuste o tipo conforme necessário
+}
+
+function TaskIcon({ taskId, AddTaskCompletion }: TaskIconProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
