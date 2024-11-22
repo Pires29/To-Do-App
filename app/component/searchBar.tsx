@@ -4,10 +4,6 @@ import { GoSearch } from "react-icons/go"; // Importar o ícone de busca
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = () => {
-    console.log("Pesquisar por:", searchTerm);
-    // Aqui você pode adicionar a lógica de pesquisa
-  };
 
   return (
     <div className="d-flex align-items-center position-relative"> {/* Adiciona posição relativa */}

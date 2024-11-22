@@ -1,7 +1,5 @@
 "use client";
 
-import { IoIosCheckmarkCircleOutline, IoIosCheckmarkCircle } from "react-icons/io";
-import { RiCircleLine, RiCircleFill } from "react-icons/ri";
 import { CiTrash } from "react-icons/ci";
 import { IoPencilSharp } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
